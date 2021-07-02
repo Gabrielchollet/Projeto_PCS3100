@@ -1,10 +1,11 @@
 # JOBLY
-> Projeto semestral PCS3100
-Projeto semestral de Introdução a Engenharia de Computação desenvolvido com o intuito de aproximar pessoas com qualificações profissionais diversas e potenciais contratantes que podem avaliar o serviço prestado e assim gerar um ecossistema interno capaz de cada vez mais levar a qualidade que desejamos aos nossos usuários
+
+> Projeto semestral de Introdução a Engenharia de Computação desenvolvido com o intuito de aproximar pessoas com qualificações profissionais diversas e potenciais contratantes que podem avaliar o serviço prestado e assim gerar um ecossistema interno capaz de cada vez mais levar a qualidade que desejamos aos nossos usuários
+
 ## Sumário:
+- [Guias de desenvolvimento](#guide)
 - [Sobre](#about)
 - [Rotas e Regras](#routesandrules)
-- [Conceitos](#concepts)
 
 
 ## :file_folder: Estrutura do Projeto
@@ -84,3 +85,39 @@ Projeto semestral de Introdução a Engenharia de Computação desenvolvido com 
 </details>
 
 <hr>
+<h2>:memo: Guias de desenvolvimento </h2> <a name="about"></a>
+
+> Esta seção é reservada para esclarecer os padrões de desenvolvimento utilizados, a fim de proporcionar um andamento organizado e claro do projeto para todos os envolvidos
+
+<h3> Commits </h3> <a name="guide"></a>
+
+<details>
+<summary>Expandir</summary>
+
+#### Use comandos que possam te ajudar
+
+```
+$ git commit -m "O titulo" -m "sua descrição"
+```
+
+1. No título ou primeira linha escreve-se o comando para o commit no modo Imperativo.
+
+```
+$ git commit -m "Adiciona instruções de commit messages" -m "sua descrição"
+```
+
+2. Em detalhes ou na terceira linha, resumem-se os detalhes com as seguintes perguntas: O que foi feito? Por quê foi feito?
+
+Usando uma escrita simplificada e objetiva o resultado será:
+
+```
+$ git commit -m "Adiciona instruções de commit messages" -m "Descrição Detalhada do Commit, onde você pode detalhar o que foi modificado em seu código e o porque foi modificado"
+```
+#### Informação nas commit messages:
+
+- Descreva o porque da mudança estar sendo feita.
+- Como ele aborda o problema?
+- Não presuma que o revisor entende qual era o problema original.
+- Descreva quais quer limitações no código atual.
+
+</details>
