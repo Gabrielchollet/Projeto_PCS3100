@@ -120,4 +120,13 @@ $ git commit -m "Adiciona instruções de commit messages" -m "Descrição Detal
 - Não presuma que o revisor entende qual era o problema original.
 - Descreva quais quer limitações no código atual.
 
+#### Separar os commits em tipos:
+
+- Feature _ Quando é desenvolvimento de uma nova funcionalidade.
+- Fix _ Quando se trata de uma correção de bug.
+- Docs _ Quando se trata somente de uma alteração na documentação, como uma atualização no README.
+- Style _ Quando mudo somente folhas de estilo.
+- Refactor _ Quando refatoro completamente um trecho de código.
+- Test _ Quando o foram escritos ou corrigidos somente testes.
+
 </details>
