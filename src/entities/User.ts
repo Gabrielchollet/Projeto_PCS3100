@@ -17,9 +17,12 @@ class User {
   @Column()
   admin: boolean;
 
+<<<<<<< HEAD
   @Column()
   worker: boolean;
 
+=======
+>>>>>>> b971468e98ef65463bc9630826a81367683586cc
   @Exclude()
 
   @Column()
