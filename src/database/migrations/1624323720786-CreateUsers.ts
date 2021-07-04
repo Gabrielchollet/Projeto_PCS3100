@@ -30,6 +30,15 @@ export class CreateUsers1624323720786 implements MigrationInterface {
                         type: "boolean",
                     },
                     {
+                        name: "employer",
+                        type: "boolean",
+                    },
+                    {
+                        name: "professional",
+                        type: "string",
+                        default: "employer",
+                    },
+                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()",

@@ -64,11 +64,7 @@ export class CreateCompliments1624732780422 implements MigrationInterface {
                 ],
             })
         );
-<<<<<<< HEAD
         /* Por essa forma, se quisesse remover essa migration, seria necessário ir no 'down' e remover todas as Foreing Keys  */
-=======
-        /* Por essa forma, se quisesse remover essa migration, seria necessário ir no 'down' e remover todas as Foring Keys  */
->>>>>>> b971468e98ef65463bc9630826a81367683586cc
         /*
         await queryRunner.createForeignKey(
             "compliments",

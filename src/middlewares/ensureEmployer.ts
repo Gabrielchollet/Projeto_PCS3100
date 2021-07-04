@@ -9,11 +9,11 @@ export async function ensureEmployer(request: Request, response: Response, next:
 
   const usersRepositories = getCustomRepository(UsersRepositories);
 
-  const { worker } = await usersRepositories.findOne(user_id);
+  const { employer } = await usersRepositories.findOne(user_id);
 
   /* Verificar se usuário eh empregador */
 
-  if (!worker) {
+  if (employer) {
     return next();
   }
   /* Usuário sem autorização para acessar essa rota */

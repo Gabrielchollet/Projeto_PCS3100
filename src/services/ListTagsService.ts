@@ -9,7 +9,7 @@ class ListTagsService {
 
     const tags = await tagsRepositories.find();
 
-    /* A função 'classToPlain' vai dentro da entidade tag e vai criar novos objetos apartir dos existentes vindos do TypeORM */
+    /* A função 'classToPlain' vai dentro da entidade tag e vai criar novos objetos a partir dos existentes vindos do TypeORM */
     return classToPlain(tags);
   }
 }

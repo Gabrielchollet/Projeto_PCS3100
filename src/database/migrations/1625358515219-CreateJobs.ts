@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table, TableForeignKey} from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class CreateJobs1625358515219 implements MigrationInterface {
 
@@ -13,22 +13,29 @@ export class CreateJobs1625358515219 implements MigrationInterface {
                         isPrimary: true,
                     },
                     {
-                        name: "name",
-                        type: "varchar"
+                        name: "employer",
+                        type: "varchar",
                     },
                     {
-                        name: "user_sender",
-                        type: "uuid",
-                    },
-                    {
-                        name: "user_receiver",
-                        type: "uuid",
+                        name: "worker",
+                        type: "varchar",
                         default: null,
+                    },
+                    {
+                        name: "professional",
+                        type: "varchar",
+                    },
+                    {
+                        name: "geolocation",
+                        type: "varchar",
                     },
                     {
                         name: "message",
                         type: "varchar",
-                        default: null,
+                    },
+                    {
+                        name: "date",
+                        type: "timestamp",
                     },
                     {
                         name: "created_at",

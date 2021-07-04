@@ -11,13 +11,22 @@ class Job {
   readonly id: string;
 
   @Column()
-  name: string;
+  employer: string;
 
   @Column()
-  user_sender: string;
+  worker: string;
+  
+  @Column()
+  professional: string;
 
   @Column()
-  user_receiver: string;
+  geolocation: string;
+
+  @Column()
+  message: string;
+
+  @Column()
+  date: Date;
   
   @CreateDateColumn()
   created_at: Date;

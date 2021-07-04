@@ -29,6 +29,7 @@ const listJobsController = new ListJobsController();
 
 /* Rota para o cadastro das tags com o middleware ensureAdmin entre o path da rota e a função */
 router.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle);
+
 /* Ambas as rotas podem possuir o mesmo nome, pois os tipos de métodos são distintos */
 router.get("/tags", ensureAuthenticated, listTagsController.handle);
 
@@ -51,9 +52,9 @@ router.get("/users/compliments/receive", ensureAuthenticated, listUserReceiveCom
 router.get("/users/", ensureAuthenticated, listUsersController.handle);
 
 /* Rota do empregador para inserir um trabalho novo na aplicação */
-router.post("/jobs", ensureEmployer, createJobController.handle);
+router.post("/jobs", ensureAuthenticated, ensureEmployer, createJobController.handle);
 
 /* Rota do empregador para buscar a listagem de trabalhos */
-router.get("/jobs/", ensureWorker, listJobsController.handle);
+router.get("/jobs/", ensureAuthenticated, ensureWorker, listJobsController.handle);
 
 export { router };

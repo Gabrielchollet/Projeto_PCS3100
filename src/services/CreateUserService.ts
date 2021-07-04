@@ -9,12 +9,14 @@ interface IUserRequest {
   email: string;
   admin?: boolean;
   worker: boolean;
+  employer: boolean;
+  professional: string;
   password: string;
 }
 
 class CreateUserService {
   /* Do tipo async para trabalhar com promisse */
-  async execute({ name, email, admin = false, worker, password }: IUserRequest) {
+  async execute({ name, email, admin = false, worker, employer, professional = "employer", password }: IUserRequest) {
 
     const usersRepository = getCustomRepository(UsersRepositories);
 
@@ -41,6 +43,8 @@ class CreateUserService {
       email,
       admin,
       worker,
+      employer,
+      professional,
       password: passwordHash,
     });
 
