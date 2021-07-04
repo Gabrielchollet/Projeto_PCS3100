@@ -7,8 +7,11 @@ import { AppointmentDetails } from '../screens/AppointmentDetails';
 import { Chat } from '../screens/Chat';
 import { AppointmentCreate } from '../screens/AppointmentCreate';
 import { Settings } from '../screens/Settings';
+import { LogIn } from '../screens/LogIn';
+import { ChooseSides } from '../screens/ChooseSides';
 
 import { theme } from '../global/styles/theme';
+
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -25,6 +28,14 @@ export function AuthRoutes() {
       <Screen
         name="SignIn"
         component={SignIn}
+      />
+      <Screen
+        name="LogIn"
+        component={LogIn}
+      />
+      <Screen
+        name="ChooseSides"
+        component={ChooseSides}
       />
       <Screen
         name="Home"

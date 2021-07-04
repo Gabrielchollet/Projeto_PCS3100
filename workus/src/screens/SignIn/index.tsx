@@ -11,8 +11,8 @@ import { Background } from '../../components/Background';
 export function SignIn() {
     const navigation = useNavigation();
 
-    function handleSignIn() {
-        navigation.navigate('Home');
+    function handleLogIn() {
+        navigation.navigate('LogIn');
     }
     return (
         <Background>
@@ -26,7 +26,7 @@ export function SignIn() {
                 <View style={styles.content}>
                     <ButtonIcon
                         title="Log In"
-                        onPress={handleSignIn}
+                        onPress={handleLogIn}
                     />
                     <ButtonIcon
                         title="Register"
