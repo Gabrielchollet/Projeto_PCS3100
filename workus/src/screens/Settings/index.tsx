@@ -48,13 +48,25 @@ export function Settings() {
             <View style={styles.list}>
                 <RectButton>
                     <Text style={styles.topic}>
-                        Gerenciar perfil
+                        Perfil
                     </Text>
                 </RectButton>
                 <Linesettings />
                 <RectButton>
                     <Text style={styles.topic}>
-                        Configurar notificações
+                        Privacidade
+                    </Text>
+                </RectButton>
+                <Linesettings />
+                <RectButton>
+                    <Text style={styles.topic}>
+                        Segurança
+                    </Text>
+                </RectButton>
+                <Linesettings />
+                <RectButton>
+                    <Text style={styles.topic}>
+                        Notificações
                     </Text>
                 </RectButton>
                 <Linesettings />
