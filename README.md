@@ -10,21 +10,20 @@
 
 ## :file_folder: Estrutura do Projeto
 <pre>
-├──USER                                     ├──Tag                               
-├ ├──(PK) ID (uuid)                         ├ ├──(PK) ID (uuid)                
-├  ├──name (varchar)                        ├  ├──name (varchar)               
-├  ├──name (varchar)                        ├  ├──created_at (Date)            
-├  ├──name (varchar)                        ├  ├──updated_at (Date)            
-├  ├──email (varchar)                       ⬇ 
-├  ├──password (varchar)                    ⬇ 
-├  ├──admin (boolean)                       ⬇ 
-├  ├──created_at (Date)                     
-├  ├──updated_at (Date)                   ├──Compliments                      
-⬇                                         ├ ├──(PK) ID (uuid)                 
-⬇                                         ├  ├──(FK) user_sender (uuid)        
-➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡  ├  ├──(FK) user_receiver (uuid)      
-                                          ├  ├──(FK) tag_id (uuid)            
-                                          ├  ├──created_at (Date)             
+├──USER                                 ├──Tag                                 ├──JOB
+├ ├──(PK) ID (uuid)                     ├ ├──(PK) ID (uuid)                    ├ ├──(PK) ID (uuid)
+├  ├──name (varchar)                    ├  ├──name (varchar)                   ├  ├──name (varchar)
+├  ├──work (varchar)                    ├  ├──created_at (Date)                ├  ├──created_at (Date)
+├  ├──email (varchar)                   ├  ├──updated_at (Date)                ├  ├──updated_at (Date)
+├  ├──password (varchar)                ⬇                                      ⬇
+├  ├──admin (boolean)                   ⬇                                      ⬇
+├  ├──created_at (Date)                 ⬇                                      ⬇
+├  ├──updated_at (Date)                 ├──Compliments                         ⬇
+⬇                                       ├ ├──(PK) ID (uuid)                    ⬇
+⬇                                       ├  ├──(FK) user_sender (uuid)          ⬇
+➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡ ├  ├──(FK) user_receiver (uuid) ←←←←←←←←  
+                                        ├  ├──(FK) tag_id (uuid)            
+                                        ├  ├──created_at (Date)             
 
 
 </pre>
