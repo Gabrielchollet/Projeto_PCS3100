@@ -14,6 +14,8 @@ import { ListTagsController } from "./controllers/ListTagsController";
 import { ListJobsController } from "./controllers/ListJobsController";
 import { ListUsersController } from "./controllers/ListUsersController";
 import { CreateJobController } from "./controllers/CreateJobController";
+import { AcceptJobController } from "./controllers/AcceptJobController";
+
 const router = Router();
 
 const createJobController = new CreateJobController();
@@ -26,6 +28,7 @@ const listUserReceiveComplimentsController = new ListUserReceiveComplimentsContr
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
 const listJobsController = new ListJobsController();
+const acceptJobController = new AcceptJobController();
 
 /* Rota para o cadastro das tags com o middleware ensureAdmin entre o path da rota e a função */
 router.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle);
@@ -54,7 +57,10 @@ router.get("/users/", ensureAuthenticated, listUsersController.handle);
 /* Rota do empregador para inserir um trabalho novo na aplicação */
 router.post("/jobs", ensureAuthenticated, ensureEmployer, createJobController.handle);
 
-/* Rota do empregador para buscar a listagem de trabalhos */
+/* Rota do empregado para buscar a listagem de trabalhos */
 router.get("/jobs/", ensureAuthenticated, ensureWorker, listJobsController.handle);
+
+/* Rota para aceitar um emprego */
+router.put("/jobs/acceptjobs", ensureAuthenticated, ensureWorker, acceptJobController.handle);
 
 export { router };
