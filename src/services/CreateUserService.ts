@@ -10,13 +10,13 @@ interface IUserRequest {
   admin?: boolean;
   worker: boolean;
   employer: boolean;
-  professional: string;
+  professional?: string;
   password: string;
 }
 
 class CreateUserService {
   /* Do tipo async para trabalhar com promisse */
-  async execute({ name, email, admin = false, worker, employer, professional = "employer", password }: IUserRequest) {
+  async execute({ name, email, admin = false, worker, employer, professional = null, password }: IUserRequest) {
 
     const usersRepository = getCustomRepository(UsersRepositories);
 

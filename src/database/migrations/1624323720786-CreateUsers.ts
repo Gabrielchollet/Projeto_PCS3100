@@ -36,7 +36,7 @@ export class CreateUsers1624323720786 implements MigrationInterface {
                     {
                         name: "professional",
                         type: "string",
-                        default: "employer",
+                        default: null,
                     },
                     {
                         name: "created_at",
