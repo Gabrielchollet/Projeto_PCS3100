@@ -8,11 +8,11 @@ import { CreateJobService } from "../services/CreateJobService";
 class CreateJobController {
   async handle(request: Request, response: Response) {
     /* Nessa parte precisamos recuperar os parâmetros name, email e admin de dentro da requisição */
-    const { employer , worker, professional, geolocation, message, date } = request.body;
+    const { user_id , worker, professional, geolocation, message, date } = request.body;
 
     const createJobService = new CreateJobService();
 
-    const job = await createJobService.execute({ employer , worker, professional, geolocation, message, date });
+    const job = await createJobService.execute(user_id, {worker, professional, geolocation, message, date });
 
     return response.json(job);
   }
