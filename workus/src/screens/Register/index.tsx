@@ -7,28 +7,28 @@ import {
     ScrollView,
     Platform
 } from 'react-native';
-import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
+import { BorderlessButton } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { TextLogIn } from '../../components/TextLogIn';
 import { theme } from '../../global/styles/theme';
 
-export function LogIn() {
+export function Register() {
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [password, setPassword] = useState('');
 
     const navigation = useNavigation();
 
-    function handleHome() {
-        navigation.navigate('Home');
+    function handleChooseSides() {
+        navigation.navigate('ChooseSides');
     }
-
     function handleGoBack() {
         navigation.goBack();
     }
+
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -46,7 +46,7 @@ export function LogIn() {
                                 />
                             </BorderlessButton>
                             <Text style={styles.title}>
-                                Log In
+                                Cadastre-se
                             </Text>
                         </View>
                     </View>
@@ -75,7 +75,7 @@ export function LogIn() {
                     </View>
                     {
                         name != '' && mail != '' && password != '' ?
-                            <ButtonIcon title="Entrar" onPress={handleHome} />
+                            <ButtonIcon title="Cadastrar-se" onPress={handleChooseSides} />
                             : <View style={styles.formnotready}>
                                 <Text style={styles.formnotreadytext}>
                                     Dê todas as informações.

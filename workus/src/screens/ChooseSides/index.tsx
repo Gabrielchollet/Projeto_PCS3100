@@ -14,8 +14,8 @@ import { Background } from '../../components/Background';
 export function ChooseSides() {
     const navigation = useNavigation();
 
-    function handleHome() {
-        navigation.navigate('Home');
+    function handleSignIn() {
+        navigation.navigate('SignIn');
     }
     return (
         <Background>
@@ -24,12 +24,12 @@ export function ChooseSides() {
                     Selecione uma categoria
                 </Text>
                 <View style={styles.content}>
-                    <RectButton onPress={handleHome}>
+                    <RectButton onPress={handleSignIn}>
                         <View style={styles.worker}>
                             <Worker />
                         </View>
                     </RectButton>
-                    <RectButton onPress={handleHome}>
+                    <RectButton onPress={handleSignIn}>
                         <View style={styles.boss}>
                             <Boss />
                         </View>

@@ -9,6 +9,7 @@ import { AppointmentCreate } from '../screens/AppointmentCreate';
 import { Settings } from '../screens/Settings';
 import { LogIn } from '../screens/LogIn';
 import { ChooseSides } from '../screens/ChooseSides';
+import { Register } from '../screens/Register';
 
 import { theme } from '../global/styles/theme';
 
@@ -32,6 +33,10 @@ export function AuthRoutes() {
       <Screen
         name="LogIn"
         component={LogIn}
+      />
+      <Screen
+        name="Register"
+        component={Register}
       />
       <Screen
         name="ChooseSides"

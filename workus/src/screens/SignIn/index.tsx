@@ -14,6 +14,10 @@ export function SignIn() {
     function handleLogIn() {
         navigation.navigate('LogIn');
     }
+
+    function handleRegister() {
+        navigation.navigate('Register');
+    }
     return (
         <Background>
             <View style={styles.container}>
@@ -30,7 +34,7 @@ export function SignIn() {
                     />
                     <ButtonIcon
                         title="Register"
-                        activeOpacity={0.7}
+                        onPress={handleRegister}
                     />
                 </View>
             </View>

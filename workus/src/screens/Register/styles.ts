@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         borderColor: theme.colors.secondary30,
         borderWidth: 2,
-        marginBottom: 48
+        marginBottom: 40
     },
     formnotreadytext: {
         fontSize: 15,

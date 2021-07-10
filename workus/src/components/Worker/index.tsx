@@ -4,16 +4,15 @@ import {
     View,
     Image
 } from 'react-native';
-
+import HammerImg from '../../assets/hammer.png';
 import { styles } from './styles';
 
 export function Worker() {
-    const uri = 'https://thumbs.dreamstime.com/z/trabalhador-executando-desenho-design-criativo-do-162331462.jpg';
 
     return (
         <View>
             <Image
-                source={{ uri }}
+                source={HammerImg}
                 style={styles.image}
                 resizeMode="cover"
             />
