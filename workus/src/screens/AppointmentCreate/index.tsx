@@ -7,7 +7,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './styles';
-import { ModalView } from '../../components/ModalView';
 import { Header } from '../../components/Header';
 import { theme } from '../../global/styles/theme';
 import { CategorySelect } from '../../components/CategorySelect';
@@ -31,16 +30,12 @@ export function AppointmentCreate() {
 
    const navigation = useNavigation();
 
-   function handleOpenModal() {
-      setOpenModal(true);
-   }
-
-   function handleCloseModal() {
-      setOpenModal(false);
-   }
-
    function handleCategorySelect(categoryId: string) {
       setCategory(categoryId);
+   }
+
+   function handleMap() {
+      navigation.navigate('Map');
    }
 
    async function handleSave() {
@@ -86,7 +81,7 @@ export function AppointmentCreate() {
                />
 
                <View style={styles.form}>
-                  <RectButton onPress={handleOpenModal}>
+                  <RectButton onPress={handleMap}>
                      <View style={styles.select}>
 
                         <View style={styles.selectBody}>
@@ -179,9 +174,6 @@ export function AppointmentCreate() {
 
             </ScrollView>
          </Background>
-         <ModalView visible={openModal} closeModal={handleCloseModal}>
-
-         </ModalView>
       </KeyboardAvoidingView>
    )
 }

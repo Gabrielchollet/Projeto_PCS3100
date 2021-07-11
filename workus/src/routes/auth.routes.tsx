@@ -10,6 +10,7 @@ import { Settings } from '../screens/Settings';
 import { LogIn } from '../screens/LogIn';
 import { ChooseSides } from '../screens/ChooseSides';
 import { Register } from '../screens/Register';
+import { Map } from '../screens/Map';
 
 import { theme } from '../global/styles/theme';
 
@@ -61,6 +62,10 @@ export function AuthRoutes() {
       <Screen
         name="Settings"
         component={Settings}
+      />
+      <Screen
+        name="Map"
+        component={Map}
       />
     </Navigator>
   )
