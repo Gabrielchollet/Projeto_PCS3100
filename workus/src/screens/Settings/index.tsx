@@ -2,7 +2,8 @@ import React from 'react';
 import { AntDesign, Feather } from '@expo/vector-icons';
 import {
     View,
-    Text
+    Text,
+    Alert
 } from 'react-native';
 import { RectButton, BorderlessButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
@@ -20,6 +21,28 @@ export function Settings() {
 
     function handleGoBack() {
         navigation.goBack();
+    }
+
+    function handleSignOut() {
+        Alert.alert('Logout', 'Deseja sair do WorkUs?',
+            [
+                {
+                    text: 'Não',
+                    style: 'cancel'
+                },
+                {
+                    text: 'Sim',
+                    onPress: handleSignIn
+                }
+            ]
+        )
+    }
+
+    function handlePressSetting() {
+        Alert.alert(
+            'Esse recurso não foi implementado',
+            '(Devido ao contexto no qual o projeto está inserido).'
+        )
     }
 
     return (
@@ -46,31 +69,31 @@ export function Settings() {
                 </View>
             </View>
             <View style={styles.list}>
-                <RectButton>
+                <RectButton onPress={handlePressSetting}>
                     <Text style={styles.topic}>
                         Perfil
                     </Text>
                 </RectButton>
                 <Linesettings />
-                <RectButton>
+                <RectButton onPress={handlePressSetting}>
                     <Text style={styles.topic}>
                         Privacidade
                     </Text>
                 </RectButton>
                 <Linesettings />
-                <RectButton>
+                <RectButton onPress={handlePressSetting}>
                     <Text style={styles.topic}>
                         Segurança
                     </Text>
                 </RectButton>
                 <Linesettings />
-                <RectButton>
+                <RectButton onPress={handlePressSetting}>
                     <Text style={styles.topic}>
                         Notificações
                     </Text>
                 </RectButton>
                 <Linesettings />
-                <RectButton onPress={handleSignIn}>
+                <RectButton onPress={handleSignOut}>
                     <Text style={styles.topic}>
                         Log Out
                     </Text>

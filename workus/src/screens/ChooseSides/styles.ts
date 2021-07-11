@@ -49,5 +49,12 @@ export const styles = StyleSheet.create({
     },
     categories: {
         flexDirection: 'row'
+    },
+    information: {
+        marginTop: 50,
+        fontSize: 24,
+        fontFamily: theme.fonts.title700,
+        color: 'red',
+        marginLeft: 70
     }
 });

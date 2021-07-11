@@ -43,6 +43,9 @@ export function ChooseSides() {
                         Empregador
                     </Text>
                 </View>
+                <Text style={styles.information}>
+                    O registro de usuários está indisponível
+                </Text>
             </View>
         </Background>
     );

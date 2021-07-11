@@ -74,11 +74,12 @@ export function LogIn() {
                         />
                     </View>
                     {
-                        name != '' && mail != '' && password != '' ?
+                        (name == 'Vinicius' && mail == 'email' && password == 'PCS3100')
+                            ?
                             <ButtonIcon title="Entrar" onPress={handleHome} />
                             : <View style={styles.formnotready}>
                                 <Text style={styles.formnotreadytext}>
-                                    Dê todas as informações.
+                                    Dê informações de uma conta existente.
                                 </Text>
                             </View>
                     }
