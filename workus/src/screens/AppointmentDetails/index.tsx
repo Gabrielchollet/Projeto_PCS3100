@@ -42,9 +42,8 @@ export function AppointmentDetails() {
         title="Detalhes"
       />
 
-      <View style={styles.map}>
-        <MapComponentDetails />
-      </View>
+      <MapComponentDetails />
+
 
       <View style={styles.bannerContent}>
         <Text style={styles.title}>

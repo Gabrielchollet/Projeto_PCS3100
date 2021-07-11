@@ -10,12 +10,8 @@ export const styles = StyleSheet.create({
         height: 214,
         width: '100%'
     },
-    banner: {
-        width: '100%',
-        height: 214,
-    },
     bannerContent: {
-        marginTop: 40,
+        marginTop: 55,
         flex: 1,
         justifyContent: 'flex-end',
         paddingHorizontal: 24,
