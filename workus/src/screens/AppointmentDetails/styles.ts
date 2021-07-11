@@ -4,17 +4,22 @@ import { getBottomSpace } from "react-native-iphone-x-helper";
 
 export const styles = StyleSheet.create({
     container: {
-      flex: 1,
+        flex: 1,
+    },
+    map: {
+        height: 214,
+        width: '100%'
     },
     banner: {
         width: '100%',
         height: 214,
     },
     bannerContent: {
-       flex: 1,
-       justifyContent: 'flex-end',
-       paddingHorizontal: 24,
-       marginBottom: 30
+        marginTop: 40,
+        flex: 1,
+        justifyContent: 'flex-end',
+        paddingHorizontal: 24,
+        marginBottom: 30
     },
     title: {
         fontSize: 28,

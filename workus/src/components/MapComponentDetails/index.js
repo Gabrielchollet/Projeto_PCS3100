@@ -1,10 +1,8 @@
 import React from 'react'
 import MapView from 'react-native-maps'
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-const height = Dimensions.get('window').height
-
-const MapComponent = () => {
+const MapComponentDetails = () => {
     return (
         <MapView
             style={styles.map}
@@ -23,8 +21,8 @@ const MapComponent = () => {
 
 const styles = StyleSheet.create({
     map: {
-        height
+        height: 300
     }
 })
 
-export default MapComponent
+export default MapComponentDetails
