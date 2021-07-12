@@ -31,7 +31,7 @@ export function AppointmentDetails() {
   const members = [
     {
       id: '1',
-      username: 'Rodrigo',
+      username: 'Vinícius',
       avatar_url: 'https://th.bing.com/th/id/OIP.03iMjoviAusLnMn52GfpYAHaHa?pid=ImgDet&rs=1'
     }
   ]
