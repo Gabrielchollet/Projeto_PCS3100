@@ -1,6 +1,7 @@
 # JOBLY
 
-> Projeto semestral de Introdução a Engenharia de Computação desenvolvido com o intuito de aproximar pessoas com qualificações profissionais diversas e potenciais contratantes que podem avaliar o serviço prestado e assim gerar um ecossistema interno capaz de cada vez mais levar a qualidade que desejamos aos nossos usuários
+> O Jobly nasceu em meio a situação alarmante do mercado de trabalho brasileiro. Dessa forma desenvolvemos uma plataforma digital com o intuito de conectar pessoas que buscam se realocar no mercado de trabalho e promover interações com os potenciais empregadores.
+
 
 ## Sumário:
 - [Guias de desenvolvimento](#guide)
@@ -21,7 +22,7 @@
 ├  ├──updated_at (Date)                 ├──Compliments                         ⬇
 ⬇                                       ├ ├──(PK) ID (uuid)                    ⬇
 ⬇                                       ├  ├──(FK) user_sender (uuid)          ⬇
-➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡ ├  ├──(FK) user_receiver (uuid) ←←←←←←←←  
+➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡├  ├──(FK) user_receiver (uuid) ←←←←←←←←  
                                         ├  ├──(FK) tag_id (uuid)            
                                         ├  ├──created_at (Date)             
 
