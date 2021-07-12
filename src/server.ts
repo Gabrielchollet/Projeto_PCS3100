@@ -8,13 +8,10 @@ import "./database";
 const app = express();
 
 /* O Express serve para trabalhar com diversos tipos de dados, como nessa aplicação queremos trabalhar com JSON devemos usar express.json() */
-/* Middlewares: são interpretadores existentes no interior de uma requisição que podem interrompê-la por completo ou adicionar alguma informação */
 /* Nesse caso temos um middleware que habilita o JSON para realizar as requisições */
 app.use(express.json());
-/* Neste há um middleware que está injetando as rotas */
 app.use(router);
 /* Middleware que pega as respostas vindas das rotas e faz uma tratativa verificando se há algum erro nessa resposta */
-/* Middlewares para erros devem receber 04 parâmetros */
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
   /* Identifica tudo que caiu no throw new */
   if (err instanceof Error) {
@@ -28,4 +25,5 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     message: "Internal Server Error"
   })
 })
+/* nos avisa que o servidor está rodando  */
 app.listen(3000, () => console.log("Server is running"));

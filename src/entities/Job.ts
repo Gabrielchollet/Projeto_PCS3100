@@ -3,13 +3,13 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } fro
 import { Expose } from "class-transformer";
 
 import { v4 as uuid } from "uuid";
-
+/* entidade que se refere a um emprego */
 @Entity("jobs")
 class Job {
   /* Quem será responsável por inserir o ID será o construtor */
   @PrimaryColumn()
   readonly id: string;
-
+  /* cada coluna significa uma propriedade de um emprego*/ 
   @Column()
   employer: string;
 

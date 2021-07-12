@@ -3,11 +3,13 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn, } fr
 
 import { v4 as uuid } from "uuid";
 
+/* entidade que se refere a um user */
 @Entity("users")
 class User {
+    /* Quem será responsável por inserir o ID será o construtor */
   @PrimaryColumn()
   readonly id: string;
-
+  /* cada coluna significa uma propriedade de um user */ 
   @Column()
   name: string;
 

@@ -1,17 +1,14 @@
-/* No interior do controller teremos acesso aos Requests e Responses */
-/* serve para pegar as informações do server (rota) e repassar para o SERVICE */
-
 import { Request, Response } from "express"
 import { CreateUserService } from "../services/CreateUserService";
 
-/* Diferentemente do que ocorre em server.ts, precisamos chamar outra classe que não tem acesso a variável app, é preciso definir as tipagens */
 class CreateUserController {
   async handle(request: Request, response: Response) {
-    /* Nessa parte precisamos recuperar os parâmetros name, email e admin de dentro da requisição */
+    /* No interior do controller teremos acesso aos Requests e Responses */
     const { name, email, admin, worker, employer, professional, password } = request.body;
 
     const createUserService = new CreateUserService();
 
+    /* serve para pegar as informações do server (rota) e repassar para o SERVICE */
     const user = await createUserService.execute({ name, email, admin, worker, employer, professional, password});
 
     return response.json(user);

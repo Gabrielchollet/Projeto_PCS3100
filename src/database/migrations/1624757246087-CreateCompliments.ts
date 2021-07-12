@@ -34,8 +34,6 @@ export class CreateCompliments1624732780422 implements MigrationInterface {
                         default: "now()",
                     },
                 ],
-                /* A diferença entre essas duas formas de crias Foring Keys é que o uso do método 'foreingKeys' dentro do creteTable permite não utilizar o nome da tabela, só é preciso de fato passar os campos */
-                /* Se em algum momento essa migration fosse removida todas as Foring Keys existentes seriam removidas */
                 foreignKeys: [
                     {
                         name: "FKUserSenderCompliments",
@@ -64,20 +62,6 @@ export class CreateCompliments1624732780422 implements MigrationInterface {
                 ],
             })
         );
-        /* Por essa forma, se quisesse remover essa migration, seria necessário ir no 'down' e remover todas as Foreing Keys  */
-        /*
-        await queryRunner.createForeignKey(
-            "compliments",
-            new TableForeignKey({
-                name: "FKUserSenderCompliments",
-                        referencedTableName: "users",
-                        referencedColumnNames: ["id"],
-                        columnNames: ["user_sender"],
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
-            })
-        )
-        */
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

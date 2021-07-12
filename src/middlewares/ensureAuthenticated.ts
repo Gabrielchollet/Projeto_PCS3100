@@ -5,7 +5,6 @@ interface IPayload {
   sub: string;
 }
 
-
 export function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
   /* Receber o token */
   const authToken = request.headers.authorization
@@ -15,9 +14,6 @@ export function ensureAuthenticated(request: Request, response: Response, next: 
     return response.status(401).end();
   }
 
-  /*
-    Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hbmRhQG5hbmRhLmNvbS5iciIsImlhdCI6MTYyNDc1ODg4NiwiZXhwIjoxNjI0ODQ1Mjg2LCJzdWIiOiIzZGIzZWU0MS03OTVkLTQwNzUtOGVhYy0zMDIwZTIyNjNmZGMifQ.owrTtPx09eHcdzsqwPIm83Ebb_nfPoRh8RKUTMWkr2s
-  */
   const [, token] = authToken.split(" ")
 
   try {
@@ -29,9 +25,7 @@ export function ensureAuthenticated(request: Request, response: Response, next: 
 
     return next();
   } catch (err) {
+    /* se nao estiver autenticado ele emite um erro */
     return response.status(401).end();
   }
-
-
-
 }

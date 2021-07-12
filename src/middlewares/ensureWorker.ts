@@ -9,6 +9,7 @@ export async function ensureWorker(request: Request, response: Response, next: N
 
   const usersRepositories = getCustomRepository(UsersRepositories);
 
+  /* A partir do id do usuario o aplicativo busca no banco de dados a propriedade worker dele */
   const { worker } = await usersRepositories.findOne(user_id);
 
   /* Verificar se usuário eh trabalhador */

@@ -9,6 +9,7 @@ export async function ensureEmployer(request: Request, response: Response, next:
 
   const usersRepositories = getCustomRepository(UsersRepositories);
 
+  /* A partir do id do usuario o aplicativo busca no banco de dados a propriedade employer dele */
   const { employer } = await usersRepositories.findOne(user_id);
 
   /* Verificar se usuário eh empregador */
