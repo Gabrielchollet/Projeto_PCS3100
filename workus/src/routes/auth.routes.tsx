@@ -11,6 +11,7 @@ import { LogIn } from '../screens/LogIn';
 import { ChooseSides } from '../screens/ChooseSides';
 import { Register } from '../screens/Register';
 import { Map } from '../screens/Map';
+import { Perfil } from '../screens/Perfil';
 
 import { theme } from '../global/styles/theme';
 
@@ -62,6 +63,10 @@ export function AuthRoutes() {
       <Screen
         name="Settings"
         component={Settings}
+      />
+      <Screen
+        name="Perfil"
+        component={Perfil}
       />
       <Screen
         name="Map"

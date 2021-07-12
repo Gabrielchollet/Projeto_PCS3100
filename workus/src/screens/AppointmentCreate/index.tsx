@@ -21,7 +21,6 @@ import { COLLECTION_APPOINTMENTS } from '../../configs/database';
 export function AppointmentCreate() {
    const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
    const [category, setCategory] = useState('');
-   const [openModal, setOpenModal] = useState(false);
 
    const [day, setDay] = useState('');
    const [month, setMonth] = useState('');

@@ -45,6 +45,10 @@ export function Settings() {
         )
     }
 
+    function handlePerfil() {
+        navigation.navigate('Perfil');
+    }
+
     return (
         <View>
             <View style={styles.header}>
@@ -69,7 +73,7 @@ export function Settings() {
                 </View>
             </View>
             <View style={styles.list}>
-                <RectButton onPress={handlePressSetting}>
+                <RectButton onPress={handlePerfil}>
                     <Text style={styles.topic}>
                         Perfil
                     </Text>

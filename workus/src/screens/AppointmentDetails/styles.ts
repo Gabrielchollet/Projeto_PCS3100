@@ -6,19 +6,15 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    map: {
-        height: 214,
-        width: '100%'
-    },
     bannerContent: {
-        marginTop: 55,
+        marginTop: 60,
         flex: 1,
         justifyContent: 'flex-end',
         paddingHorizontal: 24,
         marginBottom: 30
     },
     title: {
-        fontSize: 28,
+        fontSize: 20,
         fontFamily: theme.fonts.title700,
         color: theme.colors.heading
     },
@@ -29,7 +25,7 @@ export const styles = StyleSheet.create({
     },
     members: {
         marginLeft: 24,
-        marginTop: 27
+        marginTop: 10
     },
     footer: {
         paddingHorizontal: 24,
