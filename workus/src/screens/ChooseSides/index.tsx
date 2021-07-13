@@ -8,12 +8,17 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Boss } from '../../components/Boss';
 import { Worker } from '../../components/Worker';
+// worker e boss sao as fotos das opções que aparecem na tela
+
 import { styles } from './styles';
 import { Background } from '../../components/Background';
 
+
+// como esta associada ao cadastro do usuario, a tela nao armazena dados localmente
 export function ChooseSides() {
     const navigation = useNavigation();
 
+    // as funcoes handle sao utilizadas na navegacao entre telas
     function handleSignIn() {
         navigation.navigate('SignIn');
     }

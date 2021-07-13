@@ -1,3 +1,6 @@
+// representa o aparecimento de informacoes do usuario na tela Home
+// apresenta a imagem e uma mensagem de saudação, com o nome do usuario
+
 import React from 'react';
 import { View, Text } from 'react-native';
 

@@ -1,3 +1,5 @@
+// Cada postagem eh um appointment
+
 import React from 'react';
 import { View, Text } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
@@ -26,51 +28,53 @@ export type AppointmentProps = {
 }
 
 type Props = RectButtonProps & {
-  data: AppointmentProps;
+    data: AppointmentProps;
 }
 
-export function Appointment({data, ...rest}: Props){
- data.owner = true  
+export function Appointment({ data, ...rest }: Props) {
+    data.owner = true
     return (
         <RectButton {...rest}>
             <View style={styles.container}>
-              <GuildIcon />
+                <GuildIcon />
 
-              <View style={styles.content}>
-                  <View style={styles.header}>
-                                <Text style={styles.title}>
-                                  {data.projname}
-                                </Text>
+                <View style={styles.content}>
+                    <View style={styles.header}>
+                        <Text style={styles.title}>
+                            {data.projname}
+                        </Text>
 
-                                <Text style={styles.category}>
-                                    {data.category === '1' ? 'Trabalhador' : 'Empregador'}
-                                </Text>
-                            </View>
-                                <View style={styles.footer}>
-                                            <View style={styles.dateInfo}>
-                                                <CalendarSvg />
+                        <Text style={styles.category}>
+                            {data.category === '1' ? 'Trabalhador' : 'Empregador'}
+                        </Text>
+                    </View>
+                    <View style={styles.footer}>
+                        <View style={styles.dateInfo}>
+                            <CalendarSvg />
 
-                                                <Text style={styles.date}>
-                                                    {data.date}
-                                                </Text>
-                                            </View>
-                                        
-                                    <View style={styles.playersInfo}>
-                                        <PlayerSvg fill=
-                                          {data.owner == true ? 
-                                            theme.colors.off : theme.colors.on}
-                                        />
+                            <Text style={styles.date}>
+                                {data.date}
+                            </Text>
+                        </View>
 
-                                        <Text style={[
-                                            styles.player,
-                                            {color: data.owner == true ? 
-                                             theme.colors.off : theme.colors.on}
-                                        ]}>
-                                            Seu projeto
-                                        </Text>
-                               </View>
-                  </View>
-              </View>
+                        <View style={styles.playersInfo}>
+                            <PlayerSvg fill=
+                                {data.owner == true ?
+                                    theme.colors.off : theme.colors.on}
+                            />
+
+                            <Text style={[
+                                styles.player,
+                                {
+                                    color: data.owner == true ?
+                                        theme.colors.off : theme.colors.on
+                                }
+                            ]}>
+                                Seu projeto
+                            </Text>
+                        </View>
+                    </View>
+                </View>
 
             </View>
         </RectButton>

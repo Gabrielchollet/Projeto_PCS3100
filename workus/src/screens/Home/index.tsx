@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { View, FlatList } from 'react-native';
+// a flatlist explicita cada uma das postagens
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
@@ -17,20 +18,13 @@ import { COLLECTION_APPOINTMENTS } from '../../configs/database';
 
 
 export function Home() {
+  // armazenam dados que modificam a tela Home
   const [category, setCategory] = useState('');
   const [appointments, setAppointments] = useState<AppointmentProps[]>([]);
-  const [openModal, setOpenModal] = useState(false);
 
   const navigation = useNavigation();
 
-  function handleOpenModal() {
-    setOpenModal(true);
-  }
-
-  function handleCloseModal() {
-    setOpenModal(false);
-  }
-
+  // as funcoes handle sao utilizadas na navegacao entre telas
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
@@ -46,7 +40,7 @@ export function Home() {
   function handleSettings() {
     navigation.navigate('Settings');
   }
-
+  //funcao utilizada para recuperar os dados das postagens feitas pelo usuario
   async function loadAppointments() {
     const response = await AsyncStorage.getItem(COLLECTION_APPOINTMENTS);
     const storage: AppointmentProps[] = response ? JSON.parse(response) : [];

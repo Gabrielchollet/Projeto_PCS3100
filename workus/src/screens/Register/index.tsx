@@ -16,12 +16,14 @@ import { TextLogIn } from '../../components/TextLogIn';
 import { theme } from '../../global/styles/theme';
 
 export function Register() {
+    // permitem o armazenamento das informacoes, caso fosse implementado o armazenamento de dados localmente
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [password, setPassword] = useState('');
 
     const navigation = useNavigation();
 
+    // as funcoes handle sao utilizadas na navegacao entre telas
     function handleChooseSides() {
         navigation.navigate('ChooseSides');
     }

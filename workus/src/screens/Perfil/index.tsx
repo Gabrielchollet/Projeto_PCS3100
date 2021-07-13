@@ -14,9 +14,12 @@ import TieImg from '../../assets/tie.png';
 import { theme } from '../../global/styles/theme';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
+// o perfil nao foi implementado de acordo com cada usuario
 export function Perfil() {
+    // a imagem da estrela utilizada na avaliacao do usuario no perfil
     const uri = 'https://th.bing.com/th/id/R.436cbfdc5b1f957836aaae4005d7e513?rik=wb07auyTWxfWAQ&riu=http%3a%2f%2fwww.megafestacwb.com.br%2fwp-content%2fuploads%2f2016%2f05%2fbade-estrela.jpg&ehk=Cge%2fksPH9BfMcY9sMguYMgxB9CdAbttwNCxhZMFPDH0%3d&risl=&pid=ImgRaw';
 
+    // as funcoes handle sao utilizadas na navegacao entre telas
     function handleEdit() {
         Alert.alert(
             'Esse recurso não foi implementado',

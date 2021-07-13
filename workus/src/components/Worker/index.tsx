@@ -1,3 +1,5 @@
+// Componente com a imagem utilizada na tela ChooseSides para representar o trabalhador
+
 import React from 'react';
 
 import {

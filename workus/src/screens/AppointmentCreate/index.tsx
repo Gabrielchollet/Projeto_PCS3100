@@ -22,6 +22,7 @@ export function AppointmentCreate() {
    const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
    const [category, setCategory] = useState('');
 
+   // armazenam os dados da postagem
    const [day, setDay] = useState('');
    const [month, setMonth] = useState('');
    const [projname, setProjname] = useState('');
@@ -29,6 +30,7 @@ export function AppointmentCreate() {
 
    const navigation = useNavigation();
 
+   // as funcoes handle sao utilizadas na navegacao entre telas
    function handleCategorySelect(categoryId: string) {
       setCategory(categoryId);
    }
@@ -36,7 +38,7 @@ export function AppointmentCreate() {
    function handleMap() {
       navigation.navigate('Map');
    }
-
+   // funcao que salva os dados da postagem
    async function handleSave() {
       const newAppointment = {
          id: uuid.v4(),
@@ -150,6 +152,8 @@ export function AppointmentCreate() {
 
                   <View style={styles.footer}>
                      {
+                        // validacao dos dados, evitanto espacos vazios
+                        // nao há verificação de dias inexistentes, como 30/02
                         (category === '1' || category === '2') &&
                            (day != '' && day >= '01' && day <= '31') &&
                            (month != '' && month >= '01' && month <= '12') &&

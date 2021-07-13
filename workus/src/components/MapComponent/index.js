@@ -1,9 +1,13 @@
+// eh o mapa dado na tela de localizacao
+
 import React from 'react'
 import MapView from 'react-native-maps'
 import { StyleSheet, Dimensions } from 'react-native'
 
+// dimensao disponivel na tela 
 const height = Dimensions.get('window').height
 
+// apresenta como principal caracteristica demonstrar a localizacao do usuario
 const MapComponent = () => {
     return (
         <MapView

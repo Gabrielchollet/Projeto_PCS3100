@@ -1,3 +1,5 @@
+// cada uma das mensagens prontas na tela de chat eh explicitada por esse componente
+
 import React from 'react';
 import { View, Text } from 'react-native';
 
@@ -24,20 +26,22 @@ export type ChatMessageProps = {
     message: Message;
 }
 
-export function ChatMessage({message}: ChatMessageProps){
+export function ChatMessage({ message }: ChatMessageProps) {
+    // sao as cores utilizadas para os baloes de fala
     const { secondary30, secondary70 } = theme.colors;
+    // a mensagem do usuario apresenta coloracao e posicionamento diferentes
     const isMyMessage = () => {
         return message.user.id === 'u1';
     }
-    
+
     return (
         <View style={styles.container}>
             <View style={[
                 styles.messagebox,
                 {
-                  backgroundColor: isMyMessage() ? secondary30 : secondary70,
-                  marginLeft: isMyMessage() ? 130 : 0,
-                  marginRight: isMyMessage() ? 0 : 130
+                    backgroundColor: isMyMessage() ? secondary30 : secondary70,
+                    marginLeft: isMyMessage() ? 130 : 0,
+                    marginRight: isMyMessage() ? 0 : 130
                 }
             ]}>
                 <Text style={styles.chattext}> {message.content} </Text>

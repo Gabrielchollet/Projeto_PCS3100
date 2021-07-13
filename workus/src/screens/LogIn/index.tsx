@@ -16,12 +16,14 @@ import { TextLogIn } from '../../components/TextLogIn';
 import { theme } from '../../global/styles/theme';
 
 export function LogIn() {
+    // valores armazenados caso fosse necessaria a identificacao no BD
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [password, setPassword] = useState('');
 
     const navigation = useNavigation();
 
+    // as funcoes handle sao utilizadas na navegacao entre telas
     function handleHome() {
         navigation.navigate('Home');
     }
@@ -74,6 +76,7 @@ export function LogIn() {
                         />
                     </View>
                     {
+                        // usuario ja pronto
                         (name == 'Vinicius' && mail == 'email' && password == 'PCS3100')
                             ?
                             <ButtonIcon title="Entrar" onPress={handleHome} />

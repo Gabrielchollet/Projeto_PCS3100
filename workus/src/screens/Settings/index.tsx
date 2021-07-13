@@ -15,6 +15,7 @@ import { theme } from '../../global/styles/theme';
 export function Settings() {
     const navigation = useNavigation();
 
+    // as funcoes handle sao utilizadas na navegacao entre telas
     function handleSignIn() {
         navigation.navigate('SignIn');
     }
@@ -50,6 +51,8 @@ export function Settings() {
     }
 
     return (
+        // as linhas separam cada conteudo das opcoes de configuracoes,
+        // dadas cada uma por um Borderless button
         <View>
             <View style={styles.header}>
                 <View style={styles.button}>

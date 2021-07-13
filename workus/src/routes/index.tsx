@@ -3,11 +3,12 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { AuthRoutes } from './auth.routes';
 
-export function Routes (){
+// funcao responsavel pela navegacao no aplicativo
+export function Routes() {
     return (
         <NavigationContainer>
             <AuthRoutes />
         </NavigationContainer>
-    
+
     )
 }

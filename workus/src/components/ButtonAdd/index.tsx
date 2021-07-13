@@ -1,3 +1,5 @@
+// eh o botao da tela Home com o simbolo de '+', para a criacao de postagens
+
 import React from 'react';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -5,19 +7,19 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
 
-export function ButtonAdd({...rest} : RectButtonProps){
-    return (
-        <RectButton 
-          style={styles.container}
-          {...rest}
-        >
-            <MaterialCommunityIcons
-              name="plus"
-              color={theme.colors.heading}
-              size={24}
-            />
-           
-        </RectButton>
-    )
+export function ButtonAdd({ ...rest }: RectButtonProps) {
+  return (
+    <RectButton
+      style={styles.container}
+      {...rest}
+    >
+      <MaterialCommunityIcons
+        name="plus"
+        color={theme.colors.heading}
+        size={24}
+      />
+
+    </RectButton>
+  )
 }
 

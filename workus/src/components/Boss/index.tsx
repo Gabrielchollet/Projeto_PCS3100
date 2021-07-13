@@ -1,3 +1,5 @@
+// eh a imagem utilizada em choosesides, do empregador
+
 import React from 'react';
 
 import {

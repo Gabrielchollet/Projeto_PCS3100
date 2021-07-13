@@ -18,16 +18,18 @@ export type Params = {
 }
 
 export function AppointmentDetails() {
+  // recuperam o titulo e a descricao da postagem
   const route = useRoute();
   const { guildSelected } = route.params as Params;
 
   const navigation = useNavigation();
 
+  // as funcoes handle sao utilizadas na navegacao entre telas 
   function handleChat() {
     navigation.navigate('Chat');
   }
 
-
+  // caso houvessem mais membros envolvidos na postagem. O usuario ja esta pronto
   const members = [
     {
       id: '1',

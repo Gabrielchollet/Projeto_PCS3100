@@ -11,6 +11,7 @@ import { Background } from '../../components/Background';
 export function SignIn() {
     const navigation = useNavigation();
 
+    //as funcoes handle sao utilizadas na navegacao entre telas
     function handleLogIn() {
         navigation.navigate('LogIn');
     }

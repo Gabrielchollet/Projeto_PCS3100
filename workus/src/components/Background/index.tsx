@@ -1,3 +1,5 @@
+// eh o plano de fundo de todas as telas principais do aplicativo
+
 import React, { ReactNode } from 'react';
 import { View } from 'react-native';
 
@@ -7,10 +9,10 @@ type Props = {
     children: ReactNode;
 }
 
-export function Background({children}: Props){
+export function Background({ children }: Props) {
     return (
         <View style={styles.container}>
-           { children }
+            {children}
         </View>
     )
 }

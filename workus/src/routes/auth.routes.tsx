@@ -18,6 +18,7 @@ import { theme } from '../global/styles/theme';
 
 const { Navigator, Screen } = createStackNavigator();
 
+// funcao responsavel pela navegacao no aplicativo
 export function AuthRoutes() {
   return (
     <Navigator
