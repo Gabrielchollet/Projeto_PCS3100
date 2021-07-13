@@ -1,4 +1,4 @@
-/* Tudo que for relacionado à criação de usuário */
+/* Criação de usuário */
 import { getCustomRepository } from "typeorm";
 import { UsersRepositories } from "../repositories/UsersRepositories";
 /* Método responsável por encriptografar a senha do usuário */
@@ -15,7 +15,6 @@ interface IUserRequest {
 }
 
 class CreateUserService {
-  /* Do tipo async para trabalhar com promisse */
   async execute({ name, email, admin = false, worker, employer, professional = null, password }: IUserRequest) {
 
     const usersRepository = getCustomRepository(UsersRepositories);
@@ -33,11 +32,12 @@ class CreateUserService {
     if (userAlreadyExists) {
       throw new Error("User already exists");
     }
-
+    
+    /* senha encriptografada */
     const passwordHash = await hash(password, 8);
 
-    /* Se o usuário não existir, então esse será salvo dentro da BD */
-    /* Para isso urge criar uma instância desse objeto */
+    /* Se o usuário não existir, então esse será salvo dentro do banco de dados */
+    /* Para isso cria-se uma instância desse objeto */
     const user = usersRepository.create({
       name,
       email,

@@ -12,7 +12,7 @@ interface IAuthenticateRequest {
 class AuthenticateUserService {
   async execute({ email, password }: IAuthenticateRequest) {
     const usersRepositories = getCustomRepository(UsersRepositories);
-    /* Verificar se o email existe */
+    /* Verifica se o email existe */
     const user = await usersRepositories.findOne({
       email,
     });
@@ -21,13 +21,14 @@ class AuthenticateUserService {
       throw new Error("Email/Password incorrect");
     }
     /* Verifica se a senha está correta */
-    /* O método compare() da biblioteca bcryptjs é responsável por verificar se a senha escolhida pelo usuário e a senha "hashada" são as mesmas */
+    /* O método compare() da biblioteca bcryptjs é responsável por verificar se a senha escolhida pelo usuário 
+    e a senha criptografada são as mesmas */
     const passwordMatch = await compare(password, user.password)
 
     if (!passwordMatch) {
       throw new Error("Email/Password incorrect");
     }
-    /* Gerar token */
+    /* Gerar token que será utilizado nas próximas autenticações */
     const token = sign(
       {
         email: user.email,
