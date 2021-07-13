@@ -42,16 +42,14 @@
 #### Rotas de Listagem
 
 ##### GET
-- /users: Busca todos os usuários
-- /tags: Busca todas as tags de elogio
-- /users/contracts/send: Busca as ofertas de emprego criadas por um usuário
-- /users/contracts/receiver: Busca os contratos aceitos por um usuário
+- /users/: Busca todos os usuários
+- /jobs/: Busca as propostas de emprego criadas
 
 #### Rotas de Propostas de Emprego
 
 ##### POST
 - /jobs: Criação de uma nova proposta
-- /contracts: Salvar um contrato de negócio
+- /jobs/acceptjobs: Aceitar uma vaga de emprego 
 
 </details>
 
