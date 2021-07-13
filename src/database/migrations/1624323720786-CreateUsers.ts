@@ -44,7 +44,7 @@ export class CreateUsers1624323720786 implements MigrationInterface {
                     {
                         /* se ele for empregado, tambem preciso saber sua profissao */
                         name: "professional",
-                        type: "string",
+                        type: "varchar",
                         /* se for empregador coloco null nessa propriedade */
                         default: null,
                     },

@@ -11,21 +11,25 @@
 
 ## :file_folder: Estrutura do Projeto
 <pre>
-├──USER                                 ├──Tag                                 ├──JOB
-├ ├──(PK) ID (uuid)                     ├ ├──(PK) ID (uuid)                    ├ ├──(PK) ID (uuid)
-├  ├──name (varchar)                    ├  ├──name (varchar)                   ├  ├──name (varchar)
-├  ├──work (varchar)                    ├  ├──created_at (Date)                ├  ├──created_at (Date)
-├  ├──email (varchar)                   ├  ├──updated_at (Date)                ├  ├──updated_at (Date)
-├  ├──password (varchar)                ⬇                                      ⬇
-├  ├──admin (boolean)                   ⬇                                      ⬇
-├  ├──created_at (Date)                 ⬇                                      ⬇
-├  ├──updated_at (Date)                 ├──Compliments                         ⬇
-⬇                                       ├ ├──(PK) ID (uuid)                    ⬇
-⬇                                       ├  ├──(FK) user_sender (uuid)          ⬇
-➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡├  ├──(FK) user_receiver (uuid) ←←←←←←←←  
-                                        ├  ├──(FK) tag_id (uuid)            
-                                        ├  ├──created_at (Date)             
-
+├──USER                                 ├──JOB
+├ ├──(PK) ID (uuid)                     ├ ├──(PK) ID (uuid)
+├  ├──name (varchar)                    ├  ├──employer (varchar)
+├  ├──email (varchar)                   ├  ├──worker (varchar)
+├  ├──password (varchar)                ├  ├──professional (varchar)
+├  ├──worker (boolean)                  ├  ├──geolocation (varchar)
+├  ├──employer (boolean)                ├  ├──message (varchar)
+├  ├──professional (varchar)            ├  ├──date (Date)
+├  ├──admin (boolean)                   ├  ├──created_at (Date)
+├  ├──created_at (Date)                 ├  ├──updated_at (Date)
+├  ├──updated_at (Date)                 ⬇                      ⬇                                       ⬇ 
+⬇                                       ⬇                  
+⬇                                       ⬇                     
+⬇                                       ├──Contracts                      
+⬇                                       ├ ├──(PK) ID (uuid)                    
+⬇                                       ├  ├──(FK) employer_id (uuid)           
+➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡  ├  ├──(FK) worker_id (uuid)           
+                                        ├  ├──message (varchar)                        
+                                        ├  ├──created_at (Date)
 
 </pre>
 <hr>
@@ -43,18 +47,19 @@
 - /users: Criação de usuário
 - /login: Autenticação de usuário
 
-#### Rotas de Admin
-
-##### POST
-- /tags: Criação de tags
-
-#### Rotas Gerais
+#### Rotas de Listagem
 
 ##### GET
 - /users: Busca todos os usuários
 - /tags: Busca todas as tags de elogio
+- /users/contracts/send: Busca as ofertas de emprego criadas por um usuário
+- /users/contracts/receiver: Busca os contratos aceitos por um usuário
 
-#### Rotas de Envio e Recebido do Usuário Logado
+#### Rotas de Propostas de Emprego
+
+##### POST
+- /jobs: Criação de uma nova proposta
+- /contracts: Salvar um contrato de negócio
 
 </details>
 

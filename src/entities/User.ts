@@ -6,10 +6,10 @@ import { v4 as uuid } from "uuid";
 /* entidade que se refere a um user */
 @Entity("users")
 class User {
-    /* Quem será responsável por inserir o ID será o construtor */
+  /* Quem será responsável por inserir o ID será o construtor */
   @PrimaryColumn()
   readonly id: string;
-  /* cada coluna significa uma propriedade de um user */ 
+  /* cada coluna significa uma propriedade de um user */
   @Column()
   name: string;
 
@@ -27,7 +27,7 @@ class User {
 
   @Column()
   professional: string;
-  
+
   @Exclude()
 
   @Column()
@@ -47,5 +47,3 @@ class User {
 }
 
 export { User };
-
-//Entidadde < - > ORM < - > BD (users)  

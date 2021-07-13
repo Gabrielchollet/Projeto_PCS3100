@@ -3,7 +3,6 @@ import { Router } from "express";
 import { CreateUserController } from "./controllers/CreateUserController";
 import { ensureAdmin } from "./middlewares/ensureAdmin";
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController";
-import { CreateComplimentController } from "./controllers/CreateComplimentController";
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
 import { ensureEmployer } from "./middlewares/ensureEmployer";
 import { ensureWorker } from "./middlewares/ensureWorker";
@@ -17,7 +16,6 @@ const router = Router();
 const createJobController = new CreateJobController();
 const createUserController = new CreateUserController();
 const authenticateUserController = new AuthenticateUserController();
-const createComplimentController = new CreateComplimentController();
 const listUsersController = new ListUsersController();
 const listJobsController = new ListJobsController();
 const acceptJobController = new AcceptJobController();
@@ -28,9 +26,6 @@ router.post("/users", createUserController.handle);
 
 /* Rota responsável por fazer o login do usuário */
 router.post("/login", authenticateUserController.handle);
-
-/* Rota para salvar o compliment */
-router.post("/compliments", ensureAuthenticated, createComplimentController.handle);
 
 /* Rota para buscar a listagem dos usuarios */
 router.get("/users/", ensureAuthenticated, listUsersController.handle);
