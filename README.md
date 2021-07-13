@@ -11,25 +11,17 @@
 
 ## :file_folder: Estrutura do Projeto
 <pre>
-├──USER                                 ├──JOB
-├ ├──(PK) ID (uuid)                     ├ ├──(PK) ID (uuid)
-├  ├──name (varchar)                    ├  ├──employer (varchar)
-├  ├──email (varchar)                   ├  ├──worker (varchar)
-├  ├──password (varchar)                ├  ├──professional (varchar)
-├  ├──worker (boolean)                  ├  ├──geolocation (varchar)
-├  ├──employer (boolean)                ├  ├──message (varchar)
-├  ├──professional (varchar)            ├  ├──date (Date)
-├  ├──admin (boolean)                   ├  ├──created_at (Date)
-├  ├──created_at (Date)                 ├  ├──updated_at (Date)
-├  ├──updated_at (Date)                 ⬇                      ⬇                                       ⬇ 
-⬇                                       ⬇                  
-⬇                                       ⬇                     
-⬇                                       ├──Contracts                      
-⬇                                       ├ ├──(PK) ID (uuid)                    
-⬇                                       ├  ├──(FK) employer_id (uuid)           
-➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡  ├  ├──(FK) worker_id (uuid)           
-                                        ├  ├──message (varchar)                        
-                                        ├  ├──created_at (Date)
+├──USER                                          ├──JOB
+├ ├──(PK) ID (uuid)                              ├ ├──(PK) ID (uuid)
+├  ├──name (varchar)                             ├  ├──employer (varchar)
+├  ├──email (varchar)                            ├  ├──worker (varchar)
+├  ├──password (varchar)                         ├  ├──professional (varchar)
+├  ├──worker (boolean)           ➡➡➡➡➡➡➡➡➡➡➡     ├──geolocation (varchar)
+├  ├──employer (boolean)                         ├  ├──message (varchar)
+├  ├──professional (varchar)                     ├  ├──date (Date)
+├  ├──admin (boolean)                            ├  ├──created_at (Date)
+├  ├──created_at (Date)                          ├  ├──updated_at (Date)
+├  ├──updated_at (Date)                          
 
 </pre>
 <hr>
