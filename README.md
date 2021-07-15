@@ -16,7 +16,7 @@
 ├  ├──name (varchar)                             ├  ├──employer (varchar)
 ├  ├──email (varchar)                            ├  ├──worker (varchar)
 ├  ├──password (varchar)                         ├  ├──professional (varchar)
-├  ├──worker (boolean)           ➡➡➡➡➡➡➡➡➡➡➡     ├──geolocation (varchar)
+├  ├──worker (boolean)           ➡➡➡➡➡➡➡➡➡➡➡     ├  ├──geolocation (varchar)
 ├  ├──employer (boolean)                         ├  ├──message (varchar)
 ├  ├──professional (varchar)                     ├  ├──date (Date)
 ├  ├──admin (boolean)                            ├  ├──created_at (Date)
@@ -35,6 +35,7 @@
 ### JOBLY
 
 #### Rotas de Login e Create User
+
 ##### POST
 - /users: Criação de usuário
 - /login: Autenticação de usuário
@@ -43,7 +44,7 @@
 
 ##### GET
 - /users/: Busca todos os usuários
-- /jobs/: Busca as propostas de emprego criadas
+- /jobs/: Filtra e lista as propostas de emprego que se enquadram a profissão do usuário
 
 #### Rotas de Propostas de Emprego
 
@@ -71,12 +72,13 @@
 - [x] Não é permitido cadastrar por usuários que não sejam administradores
 
 - Cadastro de propostas de emprego
-- [ ] O usuário precisa estar autenticado na aplicação
+- [x] O usuário precisa estar autenticado na aplicação
+- [x] O usuário precisa ser um empregador 
 
-- Cadastro de avaliações
-- [ ] Não é permitido um usuário cadastrar um elogio para si
-- [ ] Não é permitido cadastrar elogios para usuários invalidos
-- [ ] O usuário precisa estar autenticado na aplicação
+- Aceitar uma proposta de emprego
+- [x] O usuário precisa estar autenticado na aplicação
+- [x] O usuário precisa ser um empregado
+
 </details>
 
 <hr>
