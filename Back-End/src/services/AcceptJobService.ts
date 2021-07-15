@@ -14,12 +14,10 @@ class AcceptJobService {
         const jobsRepositories = getCustomRepository(JobsRepositories);
         /* o programa obtem o nome do usuario a partir do seu id */
         const { name } = await usersRepositories.findOne(user_id);
-        /* o programa obtem o job a partir do id dele */
-        var Job = await jobsRepositories.findOne(job_id);
         /* o programa atualiza a coluna worker do job com o nome do empregado */
-        await jobsRepositories.update(Job, {worker : name,});
+        await jobsRepositories.update(job_id, {worker : name});
         /** retorna o emprego que foi aceito */
-        return Job;
+        return job;
       }
     }
     
