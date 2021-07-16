@@ -25,7 +25,7 @@ export function Settings() {
     }
 
     function handleSignOut() {
-        Alert.alert('Logout', 'Deseja sair do WorkUs?',
+        Alert.alert('Logout', 'Deseja sair do JOBLY?',
             [
                 {
                     text: 'Não',
