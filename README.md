@@ -16,7 +16,7 @@
 ├  ├──name (varchar)                             ├  ├──employer (varchar)
 ├  ├──email (varchar)                            ├  ├──worker (varchar)
 ├  ├──password (varchar)                         ├  ├──professional (varchar)
-├  ├──worker (boolean)           ➡➡➡➡➡➡➡➡➡➡➡     ├  ├──geolocation (varchar)
+├  ├──worker (boolean)           ➡➡➡➡➡➡➡   ├  ├──geolocation (varchar)
 ├  ├──employer (boolean)                         ├  ├──message (varchar)
 ├  ├──professional (varchar)                     ├  ├──date (Date)
 ├  ├──admin (boolean)                            ├  ├──created_at (Date)
